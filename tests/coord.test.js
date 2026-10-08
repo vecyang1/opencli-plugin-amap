@@ -15,3 +15,11 @@ test('gcj02ToWgs84 converts China Mars coordinates to international WGS-84 GPS c
   assert.equal(wgs.lng, 116.391207);
   assert.equal(wgs.lat, 39.907783);
 });
+
+test('gcj02ToWgs84 preserves international GPS coordinates outside China', () => {
+  // Warsaw, Poland: (21.122259, 52.232231)
+  const warsaw = gcj02ToWgs84(21.122259, 52.232231);
+  assert.equal(warsaw.lng, 21.122259);
+  assert.equal(warsaw.lat, 52.232231);
+});
+

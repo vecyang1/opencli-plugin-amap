@@ -32,7 +32,19 @@ function transformLon(x, y) {
   return ret;
 }
 
+export function outOfChina(lng, lat) {
+  if (lng < 72.004 || lng > 137.8347) return true;
+  if (lat < 0.8293 || lat > 55.8271) return true;
+  return false;
+}
+
 export function gcj02ToWgs84(lng, lat, precision = 6) {
+  if (outOfChina(lng, lat)) {
+    return {
+      lng: precision !== null ? Number(lng.toFixed(precision)) : lng,
+      lat: precision !== null ? Number(lat.toFixed(precision)) : lat
+    };
+  }
   const dlat = transformLat(lng - 105.0, lat - 35.0);
   const dlng = transformLon(lng - 105.0, lat - 35.0);
   const radlat = (lat / 180.0) * Math.PI;
@@ -51,3 +63,4 @@ export function gcj02ToWgs84(lng, lat, precision = 6) {
   }
   return { lng: wgsLng, lat: wgsLat };
 }
+
