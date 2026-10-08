@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Build and runtime outputs
+dist/
+build/
+*.log
+
+# Personal data and user dumps (Privacy isolation)
+exports/
+data/
+*.csv
+*.geojson
+raw_*
+*.txt
+
+# OS and environment
+.DS_Store
+.env
+.env.*
+
+# Private agent files
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+CODEX.md
+VAULT.md
+progress.md
+task_plan.md
+handoff.md
+decisions.md
+PROJECT_LINKS.md
+operations/

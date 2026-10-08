@@ -1,0 +1,32 @@
+{
+  "name": "opencli-plugin-amap",
+  "version": "1.0.0",
+  "description": "Production-grade AutoNavi / 高德地图 CLI suite for OpenCLI: dump collected spots & routes with sub-meter coordinate decoders (GCJ-02 & WGS-84), local-first fast query, and SSR search engine integration",
+  "type": "module",
+  "main": "clis/amap/dump.js",
+  "scripts": {
+    "test": "node --test tests/coord.test.js"
+  },
+  "keywords": [
+    "opencli",
+    "opencli-plugin",
+    "amap",
+    "gaode",
+    "autonavi",
+    "map",
+    "ditu",
+    "geojson",
+    "crawler",
+    "cli"
+  ],
+  "author": "Vec Yang",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vecyang1/opencli-plugin-amap.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vecyang1/opencli-plugin-amap/issues"
+  },
+  "homepage": "https://github.com/vecyang1/opencli-plugin-amap#readme"
+}

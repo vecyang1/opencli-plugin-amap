@@ -1,0 +1,6 @@
+{
+  "name": "amap",
+  "version": "1.0.0",
+  "description": "Production-grade AutoNavi / 高德地图 CLI suite for OpenCLI: dump collected spots & routes with sub-meter coordinate decoders (GCJ-02 & WGS-84), local-first fast query, and SSR search engine integration",
+  "opencli": ">=1.8.6"
+}
